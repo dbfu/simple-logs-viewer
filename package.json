@@ -1,0 +1,28 @@
+{
+  "name": "simple-logs-viewer",
+  "version": "1.5.3",
+  "description": "log file viewer",
+  "bin": {
+    "simple-logs-viewer": "index.js"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": ["log", "log viewer"],
+  "author": "xiaofu <<876809592@qq.com>>",
+  "license": "ISC",
+  "repository": "https://github.com/dbfu/simple-logs-viewer",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.7.5"
+  },
+  "files": [
+    "index.js",
+    "utils.js",
+    "views",
+    "public"
+  ]
+}

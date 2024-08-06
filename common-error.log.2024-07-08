@@ -1,0 +1,153 @@
+2024-07-08 13:16:12,842 ERROR 4172284 [-/::ffff:123.58.10.198/-/83ms POST /api/report/chart] Error: yAxis "0" not found
+    at cartesian2d (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:30341:19)
+    at getCoordSysInfoBySeries (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:30328:9)
+    at createSeriesData (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:30617:26)
+    at BarSeriesModel.getInitialData (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:40128:16)
+    at SeriesModel.init (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:22656:25)
+    at GlobalModel.<anonymous> (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:18000:32)
+    at Array.forEach (<anonymous>)
+    at each (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:414:17)
+    at GlobalModel.visitComponent (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:17937:11)
+    at entity.topologicalTravel (/project/data-analysis/node_modules/.pnpm/echarts@5.5.0/node_modules/echarts/dist/echarts.js:15753:22)
+2024-07-08 13:16:13,120 ERROR 4172284 [-/::ffff:123.58.10.198/-/35ms POST /api/report/mergeImages] Error: ENOENT, No such file or directory '<h2>Internal Server Error, real status: 500</h2>'
+    at setSource (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/lib/image.js:94:13)
+    at Image.set (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/lib/image.js:65:9)
+    at /project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/index.js:34:15
+    at new Promise (<anonymous>)
+    at loadImage (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/index.js:23:10)
+    at /project/data-analysis/dist/controller/report.js:188:86
+    at Array.map (<anonymous>)
+    at APIController.mergeImages (/project/data-analysis/dist/controller/report.js:188:51)
+    at Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: 2,
+  code: 'ENOENT',
+  path: '<h2>Internal Server Error, real status: 500</h2>',
+  syscall: 'fopen'
+}
+2024-07-08 13:52:51,455 ERROR 4172284 [-/::ffff:123.58.10.199/-/31ms POST /api/report/mergeImages] Error: ENOENT, No such file or directory ''
+    at setSource (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/lib/image.js:94:13)
+    at Image.set (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/lib/image.js:65:9)
+    at /project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/index.js:34:15
+    at new Promise (<anonymous>)
+    at loadImage (/project/data-analysis/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/index.js:23:10)
+    at /project/data-analysis/dist/controller/report.js:188:86
+    at Array.map (<anonymous>)
+    at APIController.mergeImages (/project/data-analysis/dist/controller/report.js:188:51)
+    at Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  errno: 2,
+  code: 'ENOENT',
+  path: '',
+  syscall: 'fopen'
+}
+2024-07-08 13:52:57,827 ERROR 4172284 [-/::ffff:59.48.44.230/-/6ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4172284 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 3333333 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 4444444 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24
+2024-07-08 13:53:24,536 ERROR 55555555 [-/::ffff:59.48.44.230/-/5ms GET /report/url?url=] TypeError: Cannot read properties of null (reading 'setting')
+    at ViewController.renderViewByUrl (/project/data-analysis/dist/controller/view.js:45:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Clz.<computed> (/project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/service/aspectService.js:92:34)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/common/webGenerator.js:43:26
+    at async /project/data-analysis/dist/middleware/report.middleware.js:18:28
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+i18n@3.16.2/node_modules/@midwayjs/i18n/dist/middleware.js:150:17
+    at async bodyParser (/project/data-analysis/node_modules/.pnpm/koa-bodyparser@4.4.1/node_modules/koa-bodyparser/index.js:78:5)
+    at async session (/project/data-analysis/node_modules/.pnpm/@midwayjs+session@3.16.2/node_modules/@midwayjs/session/dist/middleware/session.js:137:17)
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:277:40
+    at async /project/data-analysis/node_modules/.pnpm/@midwayjs+core@3.12.0/node_modules/@midwayjs/core/dist/baseFramework.js:271:24

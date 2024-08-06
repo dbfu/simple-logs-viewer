@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= file %>
+  </title>
+  <link rel="stylesheet" href="/prism.css" />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #2d2d2d;
+    }
+
+    .level.error {
+      color: #ff4d4f !important;
+    }
+
+    .level.warning {
+      color: #faad14 !important;
+    }
+
+    .level.info {
+      color: #52c41a !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: hsla(0, 0%, 52.9%, .4);
+
+      border-radius: 4px;
+      border: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: transparent
+    }
+
+    :hover::-webkit-scrollbar-thumb {
+      background: hsla(0, 0%, 52.9%, .4);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    .img-box {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      animation: anim 1s ease-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes anim {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(0, 10px);
+      }
+
+      100% {
+        transform: translate(0, 0px);
+      }
+    }
+
+    img {
+      width: 30px;
+    }
+  </style>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="language-log"><%= content %></code></pre>
+  <div class="img-box">
+    <img src="/down.png" />
+  </div>
+  <script src="/prism.js"></script>
+  <script>
+    const socket = io('ws://localhost:<%= port %>', {
+      query: {
+        file: "<%= file %>",
+        contentLength: <%= contentLength %>,
+    }});
+
+    const codeDom = document.querySelector('code');
+    const imgBox = document.querySelector('.img-box');
+
+    socket.on('change', (value) => {
+      // 把新的内容转换为高亮的html
+      const html = window.Prism.highlight(value, window.Prism.languages.log, 'log')
+      codeDom.innerHTML += html;
+
+      imgBox.style.display = 'flex';
+    });
+
+    // 点击图标滚动到底部并隐藏
+    imgBox.addEventListener('click', () => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+
+      imgBox.style.display = 'none';
+    });
+
+    // 用户滚动时，隐藏图标
+    window.addEventListener('scroll', () => {
+      imgBox.style.display = 'none';
+    })
+
+
+  </script>
+</body>
+
+</html>
