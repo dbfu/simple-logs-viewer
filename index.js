@@ -113,7 +113,7 @@ app.get('/:file', async (req, res) => {
   // 读取当前日志文件内容
   const content = fs.readFileSync(path.join(dirPath, fileName), 'utf8').toString();
   // 渲染模板
-  const html = await ejs.renderFile(path.join(dirPath, 'views/detail.ejs'), {
+  const html = await ejs.renderFile(path.join(__dirname, 'views/detail.ejs'), {
     content,
     file: fileName,
     contentLength: content.length,

@@ -1,6 +1,6 @@
 {
   "name": "simple-logs-viewer",
-  "version": "1.5.3",
+  "version": "1.6.2",
   "description": "log file viewer",
   "bin": {
     "simple-logs-viewer": "index.js"

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/log.png">
   <title>
     <%= file %>
   </title>
@@ -60,7 +61,7 @@
       bottom: 20px;
       left: 0;
       right: 0;
-      display: flex;
+      display: none;
       justify-content: center;
       animation: anim 1s ease-out infinite;
       cursor: pointer;
@@ -94,7 +95,8 @@
   </div>
   <script src="/prism.js"></script>
   <script>
-    const socket = io('ws://localhost:<%= port %>', {
+
+    const socket = io(`ws://${window.location.host}`, {
       query: {
         file: "<%= file %>",
         contentLength: <%= contentLength %>,
