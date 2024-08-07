@@ -110,8 +110,23 @@ app.get('/', (req, res) => {
 app.get('/:file', async (req, res) => {
   // 获取文件名
   const fileName = req.params.file;
+  const filePath = path.join(dirPath, fileName);
+  // 判断传入的地址是否在当前文件夹下面，防止访问其他文件夹下面的文件
+  const relativePath = path.relative(dirPath, filePath);
+
+  if (relativePath.startsWith('..')) {
+    res.send('不能访问其他文件夹下的内容');
+    return;
+  }
+
+  // 判断文件是否存在
+  if (!fs.existsSync(filePath)) {
+    res.send('文件不存在');
+    return;
+  }
+
   // 读取当前日志文件内容
-  const content = fs.readFileSync(path.join(dirPath, fileName), 'utf8').toString();
+  const content = fs.readFileSync(filePath, 'utf8').toString();
   // 渲染模板
   const html = await ejs.renderFile(path.join(__dirname, 'views/detail.ejs'), {
     content,
@@ -139,6 +154,9 @@ chokidar.watch(dirPath).on('change', (changeFile) => {
   }
 });
 
+process.on('uncaughtException', (error) => {
+  console.error('Caught exception: ', error);
+});
 
 server.listen(port, () => {
   console.log(`启动成功，访问http://localhost:${port}`)
