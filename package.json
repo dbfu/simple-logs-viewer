@@ -9,8 +9,7 @@
     "start": "nodemon index.js"
   },
   "keywords": ["log", "log viewer"],
-  "author": "xiaofu <<876809592@qq.com>>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "https://github.com/dbfu/simple-logs-viewer",
   "dependencies": {
     "chokidar": "^3.6.0",
